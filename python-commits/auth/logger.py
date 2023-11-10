@@ -3,7 +3,9 @@ import sys
 import warnings
 from typing import Optional, Type
 
-from gym.utils import colorize
+# from gym.utils import colorize
+
+#TODO: Import colorize from gym utlis module.
 
 DEBUG = 10
 INFO = 20
@@ -64,7 +66,7 @@ def deprecation(msg: str, *args: object):
 
 
 def error(msg: str, *args: object):
-    """Logs an error message if min_level <= ERROR in red on the sys.stderr."""
+    #TODO: Write comment explaining the condition
     if min_level <= ERROR:
         print(colorize(f"ERROR: {msg % args}", "red"), file=sys.stderr)
 
