@@ -16,7 +16,7 @@
 #endif
 
 #ifdef HAVE_PTHREAD_H
-#include <pthread.h>
+//TODO: Need to include thread header
 #endif
 
 #if defined(HAVE_PTHREAD_SETAFFINITY_NP) && defined(__FreeBSD__)
