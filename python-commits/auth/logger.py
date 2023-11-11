@@ -3,7 +3,7 @@ import sys
 import warnings
 from typing import Optional, Type
 
-# from gym.utils import colorize
+
 
 #TODO: Import colorize from gym utlis module.
 
