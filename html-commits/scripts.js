@@ -78,9 +78,7 @@ function doMath(intbuF){
     else if (pF === '−'){
         rT -= intbuF;
     }
-    else if (pF === '×'){
-        rT *= intbuF;
-    }
+    //TODO: Add case for multiplying
     else if (pF === '÷'){
         rT /= intbuF;
     }
