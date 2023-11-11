@@ -17,18 +17,16 @@ function ClickButton(value){
         return;
     }
 
-
     screen.innerText = buF;
 }
 
-//defining cases for the click of buttons like AC = and the arithmetic functions
-
+// Defining cases for the click of buttons like AC = and the arithmetic functions
 function handleSymbol(symbol){
     switch(symbol){
         case 'AC':
             buF = '0';
             rT = 0;
-            break
+            break;
         case '=':
             if (pF === null){
                 return;
@@ -48,9 +46,9 @@ function handleSymbol(symbol){
             break;
     }
 }
-//sets the value of rT to intbuF, 
-//meaning that the current value of buF becomes the new running total.
 
+// Sets the value of rT to intbuF, 
+// meaning that the current value of buF becomes the new running total.
 function handleMath(symbol){
     if (buF === '0'){
         return;
@@ -69,8 +67,6 @@ function handleMath(symbol){
     buF = '0';
 }
 
-//does math functions using arithmetic operators
-
 function doMath(intbuF){
     if (pF === '+'){
         rT += intbuF;
@@ -78,7 +74,9 @@ function doMath(intbuF){
     else if (pF === '−'){
         rT -= intbuF;
     }
-    //TODO: Add case for multiplying
+    else if (pF === '×'){ 
+        rT *= intbuF;
+    }
     else if (pF === '÷'){
         rT /= intbuF;
     }
@@ -99,10 +97,6 @@ function handleNumber(numberString){
     }
 }
 
-//function selects an element with a class of "calculator-button" using the query selector 
-//using an event listener for the "click" and the __init__ function is a constructor function for when the page loads
-//making it active for listening and clicking of button.  
-
 function __init__ (){
     document.querySelector('.calculator-button').addEventListener('click', function(event){
         ClickButton(event.target.innerText);
@@ -110,4 +104,3 @@ function __init__ (){
 }
 
 __init__ ();
-
