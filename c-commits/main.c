@@ -16,6 +16,7 @@
 #endif
 
 #ifdef HAVE_PTHREAD_H
+#include <pthread.h>
 //TODO: Need to include thread header
 #endif
 
